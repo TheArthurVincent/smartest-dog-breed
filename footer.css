@@ -1,0 +1,13 @@
+footer{
+ display: flex;
+ flex-direction: column;
+ background-color: var(--dark-grey);
+padding: 1rem;
+color: var(--white);
+text-align: center;
+align-items: center;
+gap: 0.54rem;
+}
+footer img{
+ max-width: 3rem;
+}

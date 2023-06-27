@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./notes.css');
+
+:root {
+  --title: 'Fira Sans', sans-serif;
+  --text: 'Lato', sans-serif;
+  --blue-bk: #00132B;
+  --dark-grey: #222;
+  --green-bk: #54BF08;
+  --yellow: #FFB902;
+  --black-arvin: #111;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--text);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+html {
+  background-image: url("https://ik.imagekit.io/vjz75qw96/assets/assets_for_classes/malinoisbg.jpg?updatedAt=1687867713745");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  padding: 1rem;
+  padding-top: 6rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title {
+  font-weight: 400;
+  font-family: var(--title);
+  font-size: 2rem;
+}
+
+.question {
+  list-style: none;
+  padding: 0 0 0.5rem 1rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  list-style: decimal;
+  box-sizing: border-box;
+  margin: 1rem;
+}
+
+.navigation.hidden, 
+.hidden {
+  display: none;
+}
+section {
+  opacity: 1;
+  padding: 1.2rem;
+  transform: translateX(0);
+  animation: slide-in 0.1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0.5;
+    transform: translateX(3%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex img {
+  max-width: 30%;
+  margin: 0.5rem;
+}
+
+#malinois {
+  display: grid;
+  margin: 1rem;
+  max-width: 50%;
+}
+
+iframe {
+  margin: 2rem 0;
+}
+
+h3 {
+  text-align: center;
+}
+
+.vocabulary {
+  margin: 3rem 0;
+}
+
+.navigation {
+  display: flex;
+  opacity: 0.1;
+  width: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 12%;
+  right: 25%;
+  background-color: var(--dark-grey);
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.navigation:hover {
+  opacity: 1;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 1rem;
+  padding: 4px;
+}
+
+.navigation a:hover {
+  background-color: var(--yellow);
+}
+
+.txt-questions {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.phrasal-verb {
+  padding: 1rem 0;
+}
+
+.phrasal-verb h3 {
+  padding: 1rem 0;
+}
+
+.phrasal-verb li {
+  list-style: none;
+  margin: 1rem 2rem;
+}
+
+.english-sentence {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.portuguese-sentence {
+  font-style: italic;
+  margin: 1rem;
+}
+
+.curiosity {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--dark-grey);
+}
+
+.box {
+  margin: 0.2rem;
+  border: solid 1px black;
+}
+
+.curiosity h3 {
+  padding-top: 0;
+}
+
+.phrasal-verb__examples {
+  text-align: center;
+  font-family: var(--title);
+  font-size: 1.5rem;
+  color: var(--brown);
+}
+
+@media (max-width: 1300px) {
+  .navigation {
+    display: none;
+  }
+  .vocabulary {
+    margin: 0;
+  }
+}
